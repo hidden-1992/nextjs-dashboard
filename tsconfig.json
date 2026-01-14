@@ -21,9 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    },
-    "ignoreDeprecations": "6.0",
-    "types": ["next", "next/types/global"]
+    }
   },
   "include": [
     "next-env.d.ts",
