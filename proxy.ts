@@ -1,0 +1,12 @@
+import NextAuth from 'next-auth';
+import { authConfig } from './auth.config';
+
+const { auth } = NextAuth(authConfig);
+
+// Next.js 16 要求导出名为 proxy 的函数
+export const proxy = auth;
+
+export const config = {
+  // https://nextjs.org/docs/app/api-reference/file-conventions/proxy#matcher
+  matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
+};
